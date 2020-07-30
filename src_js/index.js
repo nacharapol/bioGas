@@ -7,7 +7,7 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
-const docRef = db.collection('test').doc('alovelace');
+const docRef = db.collection('test').doc('te');
 
  docRef.set({
   first: 'Ada',
