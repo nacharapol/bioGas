@@ -34,15 +34,13 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
-    <style type="text/css">
-/* css สำหรับ div คลุม google map อีกที */
-/* css กำหนดความกว้าง ความสูงของแผนที่ */
-#map_canvas { 
-    height:600px;
-    margin:auto;
-/*  margin-top:100px;*/
-}
-</style>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
 
 </head>
 
@@ -315,35 +313,13 @@
                             <div class="col-md-6 col-lg-4">
                                 <div class="statistic__item">
                                   
-                                    <h2 class="number"><p id="demo"></p></h2>
+                                    <h2 class="number"><div id="demo"></div></h2>
                                     <span class="desc">ความดันเครื่องสูบน้ำ</span>
                                     
                                 </div>
                             </div>
                             
                             
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END -->
-
-            <!-- ตำแหน่งอุปกรณ์-->
-            <section class="statistic">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <h2>ตำแหน่งอุปกรณ์</h2>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-12">
-                            <!--///////////************************************************/////////////-->
-
-                            <iframe id="iframe" src="map.php" frameborder="0" width="100%" height="700"></iframe>
-
-                             <!--///////////***********************************************/////////////-->
-
-
-
-                            </div>                         
                         </div>
                     </div>
                 </div>
@@ -366,6 +342,10 @@
                 </div>
             </section>
             <!-- END PAGE CONTAINER-->
+
+            <h3>ตำแหน่งติดตั้งระบบสูบน้ำ</h3>
+            <!--The div element for the map -->
+            <div id="map"></div>
         </div>
 
     </div>
@@ -413,8 +393,28 @@
         document.getElementById("demo").innerHTML = json.born;
     }
 }
- http.send();
+     http.send();
     </script>
+    <script>
+// Initialize and add the map
+function initMap() {
+
+  var coordi1 = {lat: 15.0384383, lng: 102.9945846};
+  var coordi2 = {lat: 15.1991149, lng: 101.1610806};
+
+
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 8, center:  {lat: 15.0384383, lng: 102.9945846}});
+
+  var marker = new google.maps.Marker({position: coordi1, map: map});
+  var marker = new google.maps.Marker({position: coordi2, map: map});
+  
+}
+    </script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-22zxXhfflpJUrTHB3yEWWklYDkAmarA&callback=initMap">
+    </script>
+
 </body>
 
 </html>
