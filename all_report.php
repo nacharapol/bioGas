@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
 
+//echo "DATE=".$dates = $_POST["dates"];
+if(empty($dates)){
+    $dates=date("Y-m-d");
+   }
+
+?>
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -34,13 +41,30 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
-    <style>
-      #map {
-        width: 100%;
-        height: 400px;
-        background-color: grey;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css"/>
+<style type="text/css">
+
+.custom-date-style {
+	background-color: red !important;
+}
+
+</style>
+
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<script type="text/JavaScript">
+<!--
+function myF(targ,selObj,restore){
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
 
 </head>
 
@@ -63,7 +87,7 @@
                 </div>
                 <nav class="navbar-sidebar2">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
+                        <li class=" has-sub">
                             <a class="js-arrow" href="index.php">
                                 <i class="fas fa-tachometer-alt"></i>ข้อมูลการทำงาน
                                 
@@ -71,7 +95,7 @@
                             
                         </li>
                         
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-trophy"></i>รายงาน
                                 <span class="arrow">
@@ -137,7 +161,7 @@
                 <div class="menu-sidebar2__content js-scrollbar2">
                     <div class="account2">
                         <div class="image img-cir img-120">
-                            <img src="images/icon/avatar-big-01.jpg" alt="John Doe" />
+                            <img src="images/icon/avatar-big-01.jpg" alt="Administrator" />
                         </div>
                         <h4 class="name">Administraor</h4>
                         <a href="#">หน้าหลัก</a>
@@ -207,116 +231,75 @@
                 </div>
             </section>
             <!-- END BREADCRUMB-->
-
-            <!-- ก๊าซชีวภาพ-->
-            <section class="statistic">
+            <!-- เลือกวันที่-->
+           <!-- <section>
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <h2>ก๊าซชีวภาพ</h2>
                         <div class="row">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">อัตราสิ้นเปลือง</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">อุณหภูมิ</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">ความชื้น</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">ความดัน</span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END -->
-
-            <!-- เครื่องยนต์-->
-            <section class="statistic">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <h2>สถานะการทำงานของเครื่องยนต์</h2>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">ความเร็วรอบ</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">อุณหภูมิน้ำมันหล่อเย็น</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">ชั่วโมงการทำงาน</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">สถานการณ์ทำงาน</span>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END -->
-
-            <!-- น้ำ-->
-            <section class="statistic">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <h2>สถานะน้ำ</h2>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">อัตราการไหล/ชั่วโมง</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
-                                    <span class="desc">ปริมาณน้ำทังหมด</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                                <div class="statistic__item">
-                                  
-                                    <h2 class="number"><div id="demo"></div></h2>
-                                    <span class="desc">ความดันเครื่องสูบน้ำ</span>
-                                    
+                            <div class="col-xl-12">
+                            
+                                                       
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>รายงานประจำวัน</strong>
+                                    </div>
+                                    <form action="daily_report.php" method="post"   enctype="multipart/form-data"  name="form1" id="form1">
+                                                    <div class="input-group">
+                                                        <input type="text" name="dates" id="dates" placeholder="คลิกเลือกวันที่" class="form-control" value="<?php echo $dates; ?>" onChange="myFunction()">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-primary">Submit</button>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    </form>
+                                                    
                                 </div>
                             </div>
                             
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+            <!-- จบ-เลือกวันที่-->
+            <!-- กราฟ-->
+            <section>
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <!-- RECENT REPORT 2-->
+                                <div class="recent-report2">
+                                    <h3 class="title-3">รายงานปริมาณน้ำ/ก๊าซ</h3>
+                                    <div class="chart-info">
+                                        <div class="chart-info__left">
+                                            <div class="chart-note">
+                                                <span class="dot dot--blue"></span>
+                                                <span>ปริมาณน้ำ</span>
+                                            </div>
+                                            <div class="chart-note">
+                                                <span class="dot dot--green"></span>
+                                                <span>ก๊าซ</span>
+                                            </div>
+                                        </div>
+                                        <div class="chart-info-right">
+                                            
+                                            <div class="rs-select2--dark rs-select2--sm">
+                                                <select class="js-select2 au-select-dark" name="keyID" onchange="myF('self',this,0)">
+                                                    <option value="all_report.php?keyID=DAY" <? if($keyID=='DAY'){ echo "SELECTED";}?>>รายวัน</option>
+                                                    <option value="all_report.php?keyID=MONTH" <? if($keyID=='MONTH'){ echo "SELECTED";}?>>รายเดือน</option>
+                                                    <option value="all_report.php?keyID=YEAR" <? if($keyID=='YEAR'){ echo "SELECTED";}?>>รายปี</option>
+                                                </select>
+                                                <div class="dropDownSelect2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-report__chart">
+                                        <canvas id="recent-rep2-chart"></canvas>
+                                    </div>
+                                </div>
+                                <!-- END RECENT REPORT 2             -->
+                            </div>
                             
                         </div>
                     </div>
@@ -340,13 +323,16 @@
                 </div>
             </section>
             <!-- END PAGE CONTAINER-->
-
-            <h3>ตำแหน่งติดตั้งระบบสูบน้ำ</h3>
-            <!--The div element for the map -->
-            <div id="map"></div>
         </div>
 
     </div>
+    <script>
+
+    function myFunction() {
+     var x = document.form1.dates.value;
+     console.log(x);
+   }
+    </script>
 
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
@@ -375,42 +361,155 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    
+    <script src="jquery.js"></script>
+    <script src="jquery.datetimepicker.js"></script>
     <script>
-    var http = new XMLHttpRequest();
-    var url = 'http://127.0.0.1:3000';
-    var params = 'orem=ipsum&name=binny';
-    http.open('GET', url, true);
-
-    //Send the proper header information along with the request
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-    http.onreadystatechange = function() {//Call a function when the state changes.
-    if(http.readyState == 4 && http.status == 200) {
-        var json = JSON.parse(http.responseText);
-        console.log(json.born);
-        document.getElementById("demo").innerHTML = json.born;
+    window.onerror = function(errorMsg) {
+        $('#console').html($('#console').html()+'<br>'+errorMsg)
     }
-}
-     http.send();
-    </script>
-    <script>
-// Initialize and add the map
-function initMap() {
-
-  var coordi1 = {lat: 15.0384383, lng: 102.9945846};
-  var coordi2 = {lat: 15.1991149, lng: 101.1610806};
-
-
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 8, center:  {lat: 15.0384383, lng: 102.9945846}});
-
-  var marker = new google.maps.Marker({position: coordi1, map: map});
-  var marker = new google.maps.Marker({position: coordi2, map: map});
-  
-}
-    </script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-22zxXhfflpJUrTHB3yEWWklYDkAmarA&callback=initMap">
+    
+    $('#doc_leave_date').datetimepicker({
+        
+        lang:'th',
+        timepicker:false,
+        format:'Y-m-d',
+        formatDate:'Y-m-d',
+    
+    });
+    
+    $('#dates').datetimepicker({
+        
+        lang:'th',
+        timepicker:false,
+        format:'Y-m-d',
+        formatDate:'Y-m-d',
+    
+    });
+    
+    $('#datetimepicker').datetimepicker({
+    dayOfWeekStart : 1,
+    lang:'en',
+    disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
+    startDate:	'1986/01/05'
+    });
+    $('#datetimepicker').datetimepicker({value:'2015/04/15 05:03',step:10});
+    
+    $('.some_class').datetimepicker();
+    
+    $('#default_datetimepicker').datetimepicker({
+        formatTime:'H:i',
+        formatDate:'d.m.Y',
+        //defaultDate:'8.12.1986', // it's my birthday
+        defaultDate:'+03.01.1970', // it's my birthday
+        defaultTime:'10:00',
+        timepickerScrollbar:false
+    });
+    
+    $('#datetimepicker10').datetimepicker({
+        step:5,
+        inline:true
+    });
+    $('#datetimepicker_mask').datetimepicker({
+        mask:'9999/19/39 29:59'
+    });
+    
+    $('#datetimepicker1').datetimepicker({
+        datepicker:false,
+        format:'H:i',
+        step:5
+    });
+    $('#datetimepicker2').datetimepicker({
+        yearOffset:222,
+        lang:'ch',
+        timepicker:false,
+        format:'d/m/Y',
+        formatDate:'Y/m/d',
+        minDate:'-1970/01/02', // yesterday is minimum date
+        maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+    });
+    $('#datetimepicker3').datetimepicker({
+        inline:true
+    });
+    $('#datetimepicker4').datetimepicker();
+    $('#open').click(function(){
+        $('#datetimepicker4').datetimepicker('show');
+    });
+    $('#close').click(function(){
+        $('#datetimepicker4').datetimepicker('hide');
+    });
+    $('#reset').click(function(){
+        $('#datetimepicker4').datetimepicker('reset');
+    });
+    $('#datetimepicker5').datetimepicker({
+        datepicker:false,
+        allowTimes:['12:00','13:00','15:00','17:00','17:05','17:20','19:00','20:00'],
+        step:5
+    });
+    $('#datetimepicker6').datetimepicker();
+    $('#destroy').click(function(){
+        if( $('#datetimepicker6').data('xdsoft_datetimepicker') ){
+            $('#datetimepicker6').datetimepicker('destroy');
+            this.value = 'create';
+        }else{
+            $('#datetimepicker6').datetimepicker();
+            this.value = 'destroy';
+        }
+    });
+    var logic = function( currentDateTime ){
+        if (currentDateTime && currentDateTime.getDay() == 6){
+            this.setOptions({
+                minTime:'11:00'
+            });
+        }else
+            this.setOptions({
+                minTime:'8:00'
+            });
+    };
+    $('#datetimepicker7').datetimepicker({
+        onChangeDateTime:logic,
+        onShow:logic
+    });
+    $('#datetimepicker8').datetimepicker({
+        onGenerate:function( ct ){
+            $(this).find('.xdsoft_date')
+                .toggleClass('xdsoft_disabled');
+        },
+        minDate:'-1970/01/2',
+        maxDate:'+1970/01/2',
+        timepicker:false
+    });
+    $('#datetimepicker9').datetimepicker({
+        onGenerate:function( ct ){
+            $(this).find('.xdsoft_date.xdsoft_weekend')
+                .addClass('xdsoft_disabled');
+        },
+        weekends:['01.01.2014','02.01.2014','03.01.2014','04.01.2014','05.01.2014','06.01.2014'],
+        timepicker:false
+    });
+    var dateToDisable = new Date();
+        dateToDisable.setDate(dateToDisable.getDate() + 2);
+    $('#datetimepicker11').datetimepicker({
+        beforeShowDay: function(date) {
+            if (date.getMonth() == dateToDisable.getMonth() && date.getDate() == dateToDisable.getDate()) {
+                return [false, ""]
+            }
+    
+            return [true, ""];
+        }
+    });
+    $('#datetimepicker12').datetimepicker({
+        beforeShowDay: function(date) {
+            if (date.getMonth() == dateToDisable.getMonth() && date.getDate() == dateToDisable.getDate()) {
+                return [true, "custom-date-style"];
+            }
+    
+            return [true, ""];
+        }
+    });
+    $('#datetimepicker_dark').datetimepicker({theme:'dark'})
+    
+    
     </script>
 
 </body>
