@@ -68,8 +68,8 @@
         }
       });
     }
-
-
+   
+   
     //WidgetChart 2
     var ctx = document.getElementById("widgetChart2");
     if (ctx) {

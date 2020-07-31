@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
 
+//echo "DATE=".$dates = $_POST["dates"];
+if(empty($dates)){
+    $dates=date("Y-m-d");
+   }
+
+?>
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -222,12 +229,16 @@
                                     <div class="card-header">
                                         <strong>รายงานประจำวัน</strong>
                                     </div>
+                                    <form action="daily_report.php" method="post"   enctype="multipart/form-data"  name="form1" id="form1">
                                                     <div class="input-group">
-                                                        <input type="text" name="dates" id="dates" placeholder="คลิกเลือกวันที่" class="form-control">
+                                                        <input type="text" name="dates" id="dates" placeholder="คลิกเลือกวันที่" class="form-control" value="<?php echo $dates; ?>" onChange="myFunction()">
                                                         <div class="input-group-btn">
                                                             <button class="btn btn-primary">Submit</button>
+                                                            
                                                         </div>
                                                     </div>
+                                                    </form>
+                                                    
                                 </div>
                             </div>
                             
@@ -390,6 +401,13 @@
         </div>
 
     </div>
+    <script>
+
+    function myFunction() {
+     var x = document.form1.dates.value;
+     console.log(x);
+   }
+    </script>
 
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
@@ -418,22 +436,22 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
-
+    
     <script src="jquery.js"></script>
     <script src="jquery.datetimepicker.js"></script>
-    <script>/*
+    <script>
     window.onerror = function(errorMsg) {
         $('#console').html($('#console').html()+'<br>'+errorMsg)
-    }*/
+    }
     
-    /*$('#doc_leave_date').datetimepicker({
+    $('#doc_leave_date').datetimepicker({
         
         lang:'th',
         timepicker:false,
         format:'Y-m-d',
         formatDate:'Y-m-d',
     
-    });*/
+    });
     
     $('#dates').datetimepicker({
         
