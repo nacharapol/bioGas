@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 var data = {
     first: 'Ada',
   last: 'Lovelace',
-  born: 1815
+  born: 25
 }
 app.get('/', function (req, res) {
  // console.log(req.body);

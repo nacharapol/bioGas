@@ -304,7 +304,8 @@
                             </div>
                             <div class="col-md-6 col-lg-4">
                                 <div class="statistic__item">
-                                    <h2 class="number">9999</h2>
+                                  
+                                    <h2 class="number"><p id="demo"></p></h2>
                                     <span class="desc">ความดันเครื่องสูบน้ำ</span>
                                     
                                 </div>
@@ -364,7 +365,24 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <script>
+    var http = new XMLHttpRequest();
+    var url = 'http://127.0.0.1:3000';
+    var params = 'orem=ipsum&name=binny';
+    http.open('GET', url, true);
 
+    //Send the proper header information along with the request
+    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+        var json = JSON.parse(http.responseText);
+        console.log(json.born);
+        document.getElementById("demo").innerHTML = json.born;
+    }
+}
+ http.send();
+    </script>
 </body>
 
 </html>
