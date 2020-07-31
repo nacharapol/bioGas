@@ -202,7 +202,7 @@
             </section>
             <!-- END BREADCRUMB-->
 
-            <!-- STATISTIC-->
+            <!-- ก๊าซชีวภาพ-->
             <section class="statistic">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
@@ -210,28 +210,28 @@
                         <div class="row">
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
-                                    <h2 class="number"><?php echo $gas_waste;?></h2>
+                                    <h2 class="number">9999</h2>
                                     <span class="desc">อัตราสิ้นเปลือง</span>
                                     
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
-                                    <h2 class="number"><?php echo $gas_temp;?></h2>
+                                    <h2 class="number">9999</h2>
                                     <span class="desc">อุณหภูมิ</span>
                                     
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
-                                    <h2 class="number"><?php echo $gas_hum;?></h2>
+                                    <h2 class="number">9999</h2>
                                     <span class="desc">ความชื้น</span>
                                     
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
-                                    <h2 class="number"><?php echo $gas_press;?></h2>
+                                    <h2 class="number">9999</h2>
                                     <span class="desc">ความดัน</span>
                                     
                                 </div>
@@ -240,7 +240,82 @@
                     </div>
                 </div>
             </section>
-            <!-- END STATISTIC-->
+            <!-- END -->
+
+            <!-- เครื่องยนต์-->
+            <section class="statistic">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <h2>สถานะการทำงานของเครื่องยนต์</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">ความเร็วรอบ</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">อุณหภูมิน้ำมันหล่อเย็น</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">ชั่วโมงการทำงาน</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">สถานการณ์ทำงาน</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END -->
+
+            <!-- น้ำ-->
+            <section class="statistic">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <h2>สถานะน้ำ</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">อัตราการไหล/ชั่วโมง</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">ปริมาณน้ำทังหมด</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="statistic__item">
+                                    <h2 class="number">9999</h2>
+                                    <span class="desc">ความดันเครื่องสูบน้ำ</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END -->
 
             
 
