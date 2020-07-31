@@ -5,9 +5,9 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="description" content="Biogas Water Pumping System">
+    <meta name="author" content="Biogas Water Pumping System">
+    <meta name="keywords" content="Biogas Water Pumping System">
 
     <!-- Title Page-->
     <title>Biogas Water Pumping System</title>
