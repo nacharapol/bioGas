@@ -57,7 +57,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="index.php">
-                                <i class="fas fa-tachometer-alt"></i>สถานะการทำงานของระบบฯ
+                                <i class="fas fa-tachometer-alt"></i>ข้อมูลการทำงาน
                                 <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
@@ -125,7 +125,7 @@
             <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
                 <div class="logo">
                     <a href="#">
-                        <img src="images/icon/logo-white.png" alt="Cool Admin" />
+                        <img src="images/icon/logo-white.png" alt="" />
                     </a>
                 </div>
                 <div class="menu-sidebar2__content js-scrollbar2">
@@ -140,7 +140,7 @@
                         <ul class="list-unstyled navbar__list">
                             <li class="active has-sub">
                                 <a class="js-arrow" href="index.php">
-                                    <i class="fas fa-tachometer-alt"></i>สถานะการทำงานของระบบฯ
+                                    <i class="fas fa-tachometer-alt"></i>ข้อมูลการทำงาน
                                     <span class="arrow">
                                         <i class="fas fa-angle-down"></i>
                                     </span>
