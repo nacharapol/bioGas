@@ -34,6 +34,16 @@
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
 
+    <style type="text/css">
+/* css สำหรับ div คลุม google map อีกที */
+/* css กำหนดความกว้าง ความสูงของแผนที่ */
+#map_canvas { 
+    height:600px;
+    margin:auto;
+/*  margin-top:100px;*/
+}
+</style>
+
 </head>
 
 <body class="animsition">
@@ -312,6 +322,28 @@
                             </div>
                             
                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END -->
+
+            <!-- ตำแหน่งอุปกรณ์-->
+            <section class="statistic">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <h2>ตำแหน่งอุปกรณ์</h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-12">
+                            <!--///////////************************************************/////////////-->
+
+                            <iframe id="iframe" src="map.php" frameborder="0" width="100%" height="700"></iframe>
+
+                             <!--///////////***********************************************/////////////-->
+
+
+
+                            </div>                         
                         </div>
                     </div>
                 </div>
