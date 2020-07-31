@@ -1,13 +1,21 @@
 {
+<<<<<<< HEAD
   "name": "jquery-datetimepicker",
   "version": "2.4.3",
   "description": "jQuery Plugin DateTimePicker it is DatePicker and TimePicker in one",
   "main": "jquery.datetimepicker.js",
+=======
+  "name": "bioGas",
+  "version": "1.0.0",
+  "description": "biogas pumping",
+  "main": "index.js",
+>>>>>>> f372f0308f4cbca7a699f378e3af225b07b66ffa
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
+<<<<<<< HEAD
     "url": "https://github.com/xdan/datetimepicker.git"
   },
   "keywords": [
@@ -25,4 +33,20 @@
     "url": "https://github.com/xdan/datetimepicker/issues"
   },
   "homepage": "https://github.com/xdan/datetimepicker"
+=======
+    "url": "git+https://github.com/nacharapol/bioGas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nacharapol/bioGas/issues"
+  },
+  "homepage": "https://github.com/nacharapol/bioGas#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.0.0"
+  }
+>>>>>>> f372f0308f4cbca7a699f378e3af225b07b66ffa
 }
