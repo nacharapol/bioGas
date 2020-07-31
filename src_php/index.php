@@ -5,9 +5,9 @@
 
 <script>
 var http = new XMLHttpRequest();
-var url = 'get_data.php';
+var url = '127.0.0.1:3000';
 var params = 'orem=ipsum&name=binny';
-http.open('POST', url, true);
+http.open('GET', url, true);
 
 //Send the proper header information along with the request
 http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -17,7 +17,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
         alert(http.responseText);
     }
 }
-http.send(params);
+//http.send(params);
 </script>
 
 </body>
