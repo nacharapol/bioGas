@@ -54,13 +54,13 @@
                 </a>
             </div>
             <div class="menu-sidebar2__content js-scrollbar1">
-                <div class="account2">
+                <!--<div class="account2">
                     <div class="image img-cir img-120">
                         <img src="images/icon/avatar-big-01.jpg" alt="Administrator" />
                     </div>
                     <h4 class="name">Administrator</h4>
                     <a href="#">หน้าหลัก</a>
-                </div>
+                </div>-->
                 <nav class="navbar-sidebar2">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
@@ -89,6 +89,14 @@
                                 </li>
                                 
                             </ul>
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="alarm.php">
+                                <i class="fas fa-tachometer-alt"></i>รายการแจ้งเตือน
+                                
+                            </a>
+                            
                         </li>
                         
                     </ul>
@@ -135,13 +143,13 @@
                     </a>
                 </div>
                 <div class="menu-sidebar2__content js-scrollbar2">
-                    <div class="account2">
+                    <!--<div class="account2">
                         <div class="image img-cir img-120">
                             <img src="images/icon/avatar-big-01.jpg" alt="John Doe" />
                         </div>
                         <h4 class="name">Administraor</h4>
                         <a href="#">หน้าหลัก</a>
-                    </div>
+                    </div>-->
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
                             <li class="active has-sub">
@@ -171,6 +179,14 @@
                                 </li>
                                 
                             </ul>
+                        </li>
+
+                        <li class="has-sub">
+                            <a class="js-arrow" href="alarm.php">
+                                <i class="fas fa-tachometer-alt"></i>รายการแจ้งเตือน
+                                
+                            </a>
+                            
                         </li>
 
                         </ul>

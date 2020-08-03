@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
 
-//echo "DATE=".$dates = $_POST["dates"];
-if(empty($dates)){
-    $dates=date("Y-m-d");
-   }
-
-?>
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -79,7 +72,7 @@ if(empty($dates)){
                             
                         </li>
                         
-                        <li class="active has-sub">
+                        <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-trophy"></i>รายงาน
                                 <span class="arrow">
@@ -99,7 +92,7 @@ if(empty($dates)){
                             </ul>
                         </li>
 
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="alarm.php">
                                 <i class="fas fa-tachometer-alt"></i>รายการแจ้งเตือน
                                 
@@ -160,7 +153,7 @@ if(empty($dates)){
                     </div>-->
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
-                            <li class="active has-sub">
+                            <li class=" has-sub">
                                 <a class="js-arrow" href="index.php">
                                     <i class="fas fa-tachometer-alt"></i>ข้อมูลการทำงาน
                                     <span class="arrow">
@@ -189,7 +182,7 @@ if(empty($dates)){
                             </ul>
                         </li>
 
-                        <li class="has-sub">
+                        <li class="active has-sub">
                             <a class="js-arrow" href="alarm.php">
                                 <i class="fas fa-tachometer-alt"></i>รายการแจ้งเตือน
                                 
@@ -235,29 +228,23 @@ if(empty($dates)){
             <section>
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-12">
-                            
-                                                       
-                                <div class="card">
-                                    <div class="card-header">
-                                        <strong>รายงานประจำวัน</strong>
-                                    </div>
-                                    <form action="daily_report.php" method="post"   enctype="multipart/form-data"  name="form1" id="form1">
-                                                    <div class="input-group">
-                                                        <input type="text" name="dates" id="dates" placeholder="คลิกเลือกวันที่" class="form-control" value="<?php echo $dates; ?>" onChange="myFunction()">
-                                                        <div class="input-group-btn">
-                                                            <button class="btn btn-primary">Submit</button>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                    </form>
-                                                    
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
+                    <div class="col-md-12">
+
+ 
+
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">การแจ้งเตือน</strong>
+    </div>
+    <div class="card-body">
+        
+
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">E0</h4>
+            
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </section>
@@ -266,33 +253,62 @@ if(empty($dates)){
             <section>
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <!-- RECENT REPORT 2-->
-                                <div class="recent-report2">
-                                    <h3 class="title-3">รายงานปริมาณน้ำ/ก๊าซ</h3>
-                                    <div class="chart-info">
-                                        <div class="chart-info__left">
-                                            <div class="chart-note">
-                                                <span class="dot dot--blue"></span>
-                                                <span>ปริมาณน้ำ</span>
-                                            </div>
-                                            <div class="chart-note">
-                                                <span class="dot dot--green"></span>
-                                                <span>ก๊าซ</span>
-                                            </div>
-                                        </div>
-                                        <div class="chart-info-right">
+                    <div class="row m-t-30">
+                            <div class="col-md-12">
+                                <!-- DATA TABLE-->
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th>รหัส</th>
+                                                <th>ความหมาย</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>E1</td>
+                                                <td><span class="block-email">Undervoltage</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E2</td>
+                                                <td><span class="block-email">Motor Underload</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E3</td>
+                                                <td><span class="block-email">Locked Pump</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E4</td>
+                                                <td><span class="block-email">External Trip</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E5</td>
+                                                <td><span class="block-email">Open Circuit</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E6</td>
+                                                <td><span class="block-email">(a) At power-up: Short Circuit (b) While running: Over-Current</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E7</td>
+                                                <td><span class="block-email">Overheated Controller</span></td>
+                                            </tr>
                                             
-                                        </div>
-                                    </div>
-                                    <div class="recent-report__chart">
-                                        <canvas id="recent-rep2-chart"></canvas>
-                                    </div>
+                                            <tr>
+                                                <td>E9</td>
+                                                <td><span class="block-email">Internal Error</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E0</td>
+                                                <td><span class="block-email">No Alarm</span></td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- END RECENT REPORT 2             -->
+                                <!-- END DATA TABLE-->
                             </div>
-                            
                         </div>
                     </div>
                 </div>
